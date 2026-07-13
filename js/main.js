@@ -17,19 +17,27 @@
   window.addEventListener("scroll", onScroll, { passive: true });
 
   if (menuToggle && mobileNav) {
+    const setMenuOpen = (open) => {
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      mobileNav.hidden = !open;
+      header?.classList.toggle("is-open", open);
+      document.body.style.overflow = open ? "hidden" : "";
+    };
+
     menuToggle.addEventListener("click", () => {
-      const open = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!open));
-      menuToggle.setAttribute("aria-label", open ? "Open menu" : "Close menu");
-      mobileNav.hidden = open;
+      const open = menuToggle.getAttribute("aria-expanded") !== "true";
+      setMenuOpen(open);
     });
 
     mobileNav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open menu");
-        mobileNav.hidden = true;
-      });
+      link.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.matchMedia("(min-width: 860px)").matches) {
+        setMenuOpen(false);
+      }
     });
   }
 
