@@ -44,8 +44,8 @@ async function main() {
   // feather to transparent by DIAL_FADE so the rim melts into the page.
   const DIAL_CX = 234;
   const DIAL_CY = 206;
-  const DIAL_R = 168;
-  const DIAL_FADE = 182;
+  const DIAL_R = 188;
+  const DIAL_FADE = 196;
 
   for (let i = 0; i < data.length; i += 4) {
     const p = i / 4;

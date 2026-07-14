@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/30024887/README.md)
 # Selah Watch Co. — Website
 
 Marketing site for **Selah Watch Co.**, a family business run by three brothers (Kevin, Ricky, and Kris) who buy and resell watches — vintage to modern, entry level to luxury, with Japanese and Swiss movements. Sales currently happen primarily through live streams on Whatnot.
