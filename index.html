@@ -154,6 +154,10 @@
           We buy watches of all kinds and respond with a fair offer.
         </p>
         <form class="inquire-form" data-sell-form>
+          <input type="hidden" name="access_key" value="b855f190-e90e-4a3c-a340-f787922df902" />
+          <input type="hidden" name="subject" value="Sell Request — Selah Watch Co." />
+          <input type="hidden" name="from_name" value="Selah Watch Co. — Sell a Watch" />
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="form-row">
             <label for="sell-name">Name</label>
             <input id="sell-name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
@@ -164,15 +168,15 @@
           </div>
           <div class="form-row">
             <label for="sell-phone">Phone <span class="optional">(optional)</span></label>
-            <input id="sell-phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 000-0000" />
+            <input id="sell-phone" name="Phone" type="tel" autocomplete="tel" placeholder="(555) 000-0000" />
           </div>
           <div class="form-row">
             <label for="sell-brand">Brand / Model</label>
-            <input id="sell-brand" name="brand" type="text" required placeholder="e.g. Seiko 5, Rolex Datejust, Omega Seamaster" />
+            <input id="sell-brand" name="Brand and Model" type="text" required placeholder="e.g. Seiko 5, Rolex Datejust, Omega Seamaster" />
           </div>
           <div class="form-row">
             <label for="sell-era">Era</label>
-            <select id="sell-era" name="era" required>
+            <select id="sell-era" name="Era" required>
               <option value="" disabled selected>Select era</option>
               <option>Vintage</option>
               <option>Modern</option>
@@ -181,7 +185,7 @@
           </div>
           <div class="form-row">
             <label for="sell-movement">Movement</label>
-            <select id="sell-movement" name="movement" required>
+            <select id="sell-movement" name="Movement" required>
               <option value="" disabled selected>Select if known</option>
               <option>Japanese</option>
               <option>Swiss</option>
@@ -190,7 +194,7 @@
           </div>
           <div class="form-row">
             <label for="sell-condition">Condition &amp; details</label>
-            <textarea id="sell-condition" name="details" rows="4" required placeholder="Condition, box/papers, service history, asking thoughts…"></textarea>
+            <textarea id="sell-condition" name="Condition and Details" rows="4" required placeholder="Condition, box/papers, service history, asking thoughts…"></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Request an Offer</button>
           <p class="form-status" data-sell-status hidden role="status"></p>
@@ -225,6 +229,10 @@
         <h2>Looking for a watch?</h2>
         <p class="section-lede">Tell us what you’re after — vintage or modern, entry level or luxury, Japanese or Swiss. We’ll help you find it.</p>
         <form class="inquire-form" data-inquire-form>
+          <input type="hidden" name="access_key" value="b855f190-e90e-4a3c-a340-f787922df902" />
+          <input type="hidden" name="subject" value="Buy Inquiry — Selah Watch Co." />
+          <input type="hidden" name="from_name" value="Selah Watch Co. — Buy Inquiry" />
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="form-row">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
@@ -235,7 +243,7 @@
           </div>
           <div class="form-row">
             <label for="interest">Looking for</label>
-            <select id="interest" name="interest" required>
+            <select id="interest" name="Looking For" required>
               <option value="" disabled selected>Select a category</option>
               <option>Vintage watch</option>
               <option>Modern watch</option>
@@ -248,7 +256,7 @@
           </div>
           <div class="form-row">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Budget, preferred brands, size, style…"></textarea>
+            <textarea id="message" name="Message" rows="4" placeholder="Budget, preferred brands, size, style…"></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send Inquiry</button>
           <p class="form-status" data-form-status hidden role="status"></p>

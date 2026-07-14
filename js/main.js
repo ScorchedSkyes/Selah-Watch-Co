@@ -81,13 +81,33 @@
     const status = document.querySelector(statusSel);
     if (!form || !status) return;
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const data = new FormData(form);
       const name = String(data.get("name") || "").trim();
+      const button = form.querySelector("button[type=submit]");
+
       status.hidden = false;
-      status.textContent = thankYou(name);
-      form.reset();
+      status.textContent = "Sending…";
+      if (button) button.disabled = true;
+
+      try {
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: data,
+        });
+        const result = await res.json();
+        if (result.success) {
+          status.textContent = thankYou(name);
+          form.reset();
+        } else {
+          status.textContent = "Something went wrong — please try again.";
+        }
+      } catch {
+        status.textContent = "Network error — please check your connection and try again.";
+      } finally {
+        if (button) button.disabled = false;
+      }
     });
   };
 
